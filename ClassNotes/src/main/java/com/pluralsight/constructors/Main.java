@@ -25,4 +25,3 @@ public class Main {
         System.out.println("Person 2 Name: " + person2.name + "\n" + "Person 2 favorite color: " + person2.favColor + "\n" + "Person 2 age: " + person2.age);
     }
 }
-
