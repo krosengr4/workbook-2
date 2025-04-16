@@ -20,7 +20,8 @@ public class AddressBuilder {
         String billingState = myScanner.nextLine();
 
         System.out.println("Please enter your billing zip: ");
-        String billingZip = myScanner.nextLine();
+        int billingZip = myScanner.nextInt();
+        myScanner.nextLine();
 
         StringBuilder billingInfo = new StringBuilder();
         billingInfo
