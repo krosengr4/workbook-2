@@ -8,6 +8,8 @@
       <sourceFolder url="file://$MODULE_DIR$/HighScoreWins/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TheaterReservations/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ClassNotes/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CellPhoneService/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AddressBuilder/src/main/java" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/FullNameGenerator/target" />
     </content>
     <orderEntry type="inheritedJdk" />
