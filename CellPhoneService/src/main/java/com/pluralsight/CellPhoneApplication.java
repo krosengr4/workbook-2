@@ -8,7 +8,7 @@ public class CellPhoneApplication {
         // Create new instance of Scanner
         Scanner myScanner = new Scanner(System.in);
 
-        // Use scanner to ask the user for data
+        // Use scanner to ask the user for data and store it in variables
         System.out.println("Please enter your Cellphones serial number: ");
         long userSerialNum = myScanner.nextLong();
         myScanner.nextLine();
