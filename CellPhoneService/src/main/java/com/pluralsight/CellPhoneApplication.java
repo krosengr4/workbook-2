@@ -65,13 +65,4 @@ public class CellPhoneApplication {
 //        System.out.println("Phone Owner: " + cellPhone1.getOwner());
 //    }
 
-
-    static void myCellphone() {
-        CellPhone myCellPhone = new CellPhone();
-        myCellPhone.setSerialNumber(41234125);
-        myCellPhone.setModel("iPhone");
-
-        System.out.println(myCellPhone.getModel() + myCellPhone.getSerialNumber());
-    }
-
 }
