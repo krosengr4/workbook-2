@@ -10,18 +10,19 @@ public class CellPhoneApplication {
 
         System.out.println("Please enter your Cellphones serial number: ");
         long userSerialNum = myScanner.nextLong();
+        myScanner.nextLine();
 
         System.out.println("Please enter your Cellphones model: ");
-        String userModel = myScanner.next();
+        String userModel = myScanner.nextLine();
 
         System.out.println("Please enter your Cellphones carrier: ");
-        String userCarrier = myScanner.next();
+        String userCarrier = myScanner.nextLine();
 
         System.out.println("Please enter your Cellphones phone number: ");
-        String userPhoneNum = myScanner.next();
+        String userPhoneNum = myScanner.nextLine();
 
         System.out.println("Please enter the name of your cellphones owner: ");
-        String ownerName = myScanner.next();
+        String ownerName = myScanner.nextLine();
 
         CellPhone userCellphone = new CellPhone();
 
@@ -38,7 +39,7 @@ public class CellPhoneApplication {
         System.out.println("The name of your phone's owner is: " + userCellphone.getOwner());
     }
 
-    static void myCellphone(){
+    static void myCellphone() {
         CellPhone myCellPhone = new CellPhone();
         myCellPhone.setSerialNumber(41234125);
         myCellPhone.setModel("iPhone");

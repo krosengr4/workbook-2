@@ -1,7 +1,5 @@
 package com.pluralsight;
 
-import java.util.Scanner;
-
 public class CellPhone {
 
     long serialNumber;
@@ -51,6 +49,5 @@ public class CellPhone {
     public String getOwner() {
         return owner;
     }
-
 
 }
