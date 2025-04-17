@@ -16,38 +16,56 @@ public class CellPhone {
         owner = "";
     }
 
+    public CellPhone(String phoneNumber, String owner){
+        this.phoneNumber = phoneNumber;
+        this.owner = owner;
+    }
+
     // Setters for all 5 data
-    public void setSerialNumber(long serialNumber){
+    public void setSerialNumber(long serialNumber) {
         this.serialNumber = serialNumber;
     }
+
     public void setModel(String model) {
         this.model = model;
     }
-    public void setCarrier(String carrier){
+
+    public void setCarrier(String carrier) {
         this.carrier = carrier;
     }
-    public void setPhoneNumber(String phoneNumber){
+
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
-    public void setOwner(String owner){
+
+    public void setOwner(String owner) {
         this.owner = owner;
     }
 
     // Getters for all 5 data
-    public long getSerialNumber(){
+    public long getSerialNumber() {
         return serialNumber;
     }
-    public String getModel(){
+
+    public String getModel() {
         return model;
     }
-    public String getCarrier(){
+
+    public String getCarrier() {
         return carrier;
     }
-    public String getPhoneNumber(){
+
+    public String getPhoneNumber() {
         return phoneNumber;
     }
+
     public String getOwner() {
         return owner;
+    }
+
+    // Dial method
+    public void dial(String dialPhoneNumber, String dialOwner) {
+        System.out.println(owner + "'s phone is calling " + dialOwner + "'s " + "phone at: " + dialPhoneNumber);
     }
 
 }

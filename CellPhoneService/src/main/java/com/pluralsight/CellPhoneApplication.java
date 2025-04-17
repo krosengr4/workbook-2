@@ -5,9 +5,10 @@ import java.util.Scanner;
 public class CellPhoneApplication {
 
     public static void main(String[] args) {
-
+        // Create new instance of Scanner
         Scanner myScanner = new Scanner(System.in);
 
+        // Use scanner to ask the user for data
         System.out.println("Please enter your Cellphones serial number: ");
         long userSerialNum = myScanner.nextLong();
         myScanner.nextLine();
@@ -24,20 +25,37 @@ public class CellPhoneApplication {
         System.out.println("Please enter the name of your cellphones owner: ");
         String ownerName = myScanner.nextLine();
 
+        // Create new instance of CellPhone
         CellPhone userCellphone = new CellPhone();
 
+        // Set the data for new instance of CellPhone with data the user provided
         userCellphone.setSerialNumber(userSerialNum);
         userCellphone.setModel(userModel);
         userCellphone.setCarrier(userCarrier);
         userCellphone.setPhoneNumber(userPhoneNum);
         userCellphone.setOwner(ownerName);
 
-        System.out.println("Your phone's serial number is: " + userCellphone.getSerialNumber());
-        System.out.println("Your phone's model is: " + userCellphone.getModel());
-        System.out.println("Your phone's carrier is: " + userCellphone.getCarrier());
-        System.out.println("Your phone's phone number is: " + userCellphone.getPhoneNumber());
-        System.out.println("The name of your phone's owner is: " + userCellphone.getOwner());
+        // Call the displayInfo method with user's data
+        displayInfo(userCellphone);
+
+        // Create new instance of cellphone for my phone
+        CellPhone myPhone = new CellPhone("512-663-5880", "Kevin Rosengren");
+
+
+        // Call the dial method with number that user wants to call
+        myPhone.dial(userCellphone.getPhoneNumber(), userCellphone.getOwner());
+        userCellphone.dial(myPhone.getPhoneNumber(), myPhone.getOwner());
     }
+
+//     Display the user's phone info
+    public static void displayInfo(CellPhone cellPhone1) {
+        System.out.println("Serial Number: " + cellPhone1.getSerialNumber());
+        System.out.println("Phone Model: " + cellPhone1.getModel());
+        System.out.println("Phone Carrier: " + cellPhone1.getCarrier());
+        System.out.println("Phone Number: " + cellPhone1.getPhoneNumber());
+        System.out.println("Phone Owner: " + cellPhone1.getOwner());
+    }
+
 
     static void myCellphone() {
         CellPhone myCellPhone = new CellPhone();
