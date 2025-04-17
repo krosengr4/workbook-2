@@ -25,26 +25,25 @@ public class CellPhoneApplication {
         System.out.println("Please enter the name of your cellphones owner: ");
         String ownerName = myScanner.nextLine();
 
-        // Create new instance of CellPhone
-        CellPhone userCellphone = new CellPhone();
+        // Create new instance of CellPhone for user phone
+        CellPhone userPhone = new CellPhone();
 
         // Set the data for new instance of CellPhone with data the user provided
-        userCellphone.setSerialNumber(userSerialNum);
-        userCellphone.setModel(userModel);
-        userCellphone.setCarrier(userCarrier);
-        userCellphone.setPhoneNumber(userPhoneNum);
-        userCellphone.setOwner(ownerName);
+        userPhone.setSerialNumber(userSerialNum);
+        userPhone.setModel(userModel);
+        userPhone.setCarrier(userCarrier);
+        userPhone.setPhoneNumber(userPhoneNum);
+        userPhone.setOwner(ownerName);
 
         // Call the displayInfo method with user's data
-        displayInfo(userCellphone);
+        displayInfo(userPhone);
 
         // Create new instance of cellphone for my phone
         CellPhone myPhone = new CellPhone("512-663-5880", "Kevin Rosengren");
 
-
-        // Call the dial method with number that user wants to call
-        myPhone.dial(userCellphone.getPhoneNumber(), userCellphone.getOwner());
-        userCellphone.dial(myPhone.getPhoneNumber(), myPhone.getOwner());
+        // Call the dial method with number and owner that user wants to call
+        myPhone.dial(userPhone.getPhoneNumber(), userPhone.getOwner());
+        userPhone.dial(myPhone.getPhoneNumber(), myPhone.getOwner());
     }
 
 //     Display the user's phone info
