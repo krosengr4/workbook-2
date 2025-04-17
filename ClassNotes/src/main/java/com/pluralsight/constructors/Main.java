@@ -14,7 +14,8 @@ public class Main {
         System.out.println("My age is: " + myPerson.age);
         System.out.println("I have " + myPerson.numbOfLegs + " legs"); //<--- This is a static variable. It is the same for every Person you create.
 
-        person2();
+//        person2();
+        people();
     }
 
     static void person2() {
@@ -23,5 +24,19 @@ public class Main {
         person2.favColor = "Orange";
 
         System.out.println("Person 2 Name: " + person2.name + "\n" + "Person 2 favorite color: " + person2.favColor + "\n" + "Person 2 age: " + person2.age);
+    }
+
+    static void people() {
+        Person person1 = new Person("Johnny");
+        Person person2;
+
+        // Set p2 = p1 so that both people have the same name
+        person2 = person1;
+        System.out.println("Person 2 name = " + person2.name);
+
+        // Since we set p2 = p1, changing the name of 1 will change the name of both.
+        person2.name = "Timmy";
+        System.out.println("Person 1 name = " + person1.name);
+        System.out.println("Person 2 name = " + person2.name);
     }
 }
