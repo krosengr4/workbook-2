@@ -39,4 +39,8 @@ public class Main {
         System.out.println("Person 1 name = " + person1.name);
         System.out.println("Person 2 name = " + person2.name);
     }
+
+    public void displayPerson() {
+
+    }
 }
