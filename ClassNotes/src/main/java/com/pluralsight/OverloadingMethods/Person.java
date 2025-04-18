@@ -40,7 +40,7 @@ public class Person {
         this.favColor = favColor;
     }
 
-    // Creating method to display a person's info. 
+    // Creating method to display a person's info.
     public void displayInfo() {
         System.out.println("Persons name: " + this.name);
         System.out.println("Persons age: " + this.age);

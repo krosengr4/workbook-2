@@ -8,6 +8,7 @@ public class Main {
     }
 
     static void makePerson() {
+        // Making a person instance by passing in parameters
         Person person1 = new Person("Kevin", 24, "Red");
         person1.displayInfo();
     }
