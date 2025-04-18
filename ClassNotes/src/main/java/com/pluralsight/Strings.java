@@ -1,6 +1,5 @@
 package com.pluralsight;
 
-import java.sql.SQLOutput;
 import java.time.LocalDate;
 
 public class Strings {
