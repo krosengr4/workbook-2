@@ -1,7 +1,7 @@
 package com.pluralsight;
 
 public class Arrays {
-    //! Once you set the size of the array, it cannot change.
+    //! Once you set the size of the array, the size cannot change.
 
     public static void main(String[] args) {
 
@@ -9,12 +9,19 @@ public class Arrays {
         forEachLoop();
         emptyArray();
 
+        //Passing in an array into a method as a parameter
+        String[] cities = {"Austin", "San Fransisco", "New Orleans", "Los Angeles"};
+        //call displayNumbers() method and pass in numbers array
+        displayCities(cities);
+
+
     }
 
     static void createAndPrintArray() {
 
         int[] integerArray = {53, 22, 75, 24, 53, 02, 64};
 
+        //loop through array and print every value
         for (int i = 0; i < integerArray.length; i++) {
             System.out.print(integerArray[i] + " ");
         }
@@ -43,8 +50,19 @@ public class Arrays {
             numbers[i] = i * 3;
             System.out.print(" " + numbers[i]);
         }
-        
-        
+        System.out.println("\n");
+    }
+
+    // Passing in Arrays into a method as parameters
+    public static void displayCities(String cities[]) {
+        // Using s to format out. Puts number in front of the city when printed out.
+        int s = 1;
+
+        for (int i = 0; i < cities.length; i++) {
+            System.out.print(s + "." +  cities[i] + " ");
+            s++;
+        }
+        System.out.println("\n");
     }
 
 }
