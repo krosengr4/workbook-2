@@ -3,11 +3,20 @@ public class Vehicle {
     long vehicleId;
     String makeModel;
     String color;
-    String odometerReading;
-    String price;
+    int odometerReading;
+    float price;
+
+    //Constructor for a new instance of Vehicle
+    public Vehicle(long vehicleId, String makeModel, String color, int odometerReading, float price){
+        this.vehicleId = vehicleId;
+        this.makeModel = makeModel;
+        this.color = color;
+        this.odometerReading = odometerReading;
+        this.price = price;
+    }
 
     //region Getters and Setters
-    public Long getVehicleId(){
+    public long getVehicleId(){
         return vehicleId;
     }
     public void setVehicleId(long vehicleId){
@@ -28,17 +37,17 @@ public class Vehicle {
         this.color = color;
     }
 
-    public String getOdometerReading() {
+    public int getOdometerReading() {
         return odometerReading;
     }
-    public void setOdometerReading(String odometerReading) {
+    public void setOdometerReading(int odometerReading) {
         this.odometerReading = odometerReading;
     }
 
-    public String getPrice() {
+    public float getPrice() {
         return price;
     }
-    public void setPrice(String price) {
+    public void setPrice(float price) {
         this.price = price;
     }
     //endregion
