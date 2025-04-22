@@ -11,6 +11,8 @@
       <sourceFolder url="file://$MODULE_DIR$/CellPhoneService/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/AddressBuilder/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/LoopingExercises/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/RollTheDice/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/RollTheDice/src/test" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/FullNameGenerator/target" />
     </content>
     <orderEntry type="inheritedJdk" />
