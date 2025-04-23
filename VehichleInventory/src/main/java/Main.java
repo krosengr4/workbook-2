@@ -50,9 +50,7 @@ public class Main {
             if (vehicles[i] == null) {
                 continue;
             }
-
-            vehicles[i].getVehicleId();
-            System.out.println((i + 1) + " - " + vehicles[i].vehicleId + " " + vehicles[i].getMakeModel() + " " + vehicles[i].getColor() + " " + vehicles[i].getOdometerReading() + " " + vehicles[i].getPrice());
+            System.out.println((i + 1) + " - " + vehicles[i].getVehicleId() + " " + vehicles[i].getMakeModel() + " " + vehicles[i].getColor() + " " + vehicles[i].getOdometerReading() + " " + vehicles[i].getPrice());
         }
     }
 
@@ -112,12 +110,64 @@ public class Main {
 
     //Method to search vehicles by color
     static void searchByColor() {
-        System.out.println("Search vehicles by color");
+        Scanner myScanner = new Scanner(System.in);
+
+        //get user input
+        System.out.println("Enter the color of the car you want to search: ");
+        String userInput = myScanner.nextLine().toUpperCase();
+
+        //boolean to see if there is a car that matches
+        boolean ifFound = false;
+
+        //
+        for (int i = 0; i < vehicles.length; i++) {
+
+            if (vehicles[i] != null) {
+                String color = vehicles[i].getColor();
+
+                if (userInput.equals(color.toUpperCase())) {
+                    ifFound = true;
+                    System.out.println((i + 1) + " - " + vehicles[i].getVehicleId() + " " + vehicles[i].getMakeModel() + " " + vehicles[i].getColor() + " " + vehicles[i].getOdometerReading() + " " + vehicles[i].getPrice());
+
+                }
+            }
+        }
+        if (!ifFound) {
+            System.out.println("There are no vehicles with that color.");
+        }
     }
 
     //Method to add a vehicle
     static void addAVehicle() {
-        System.out.println("Add a vehicle");
+        //collect user input
+        Scanner myScanner = new Scanner(System.in);
+        System.out.println("Enter the vehicle ID: ");
+        long newVehicleID = Long.parseLong(myScanner.nextLine().trim());
+
+        System.out.println("Enter the vehicle make and model: ");
+        String newMakeModel = myScanner.nextLine().trim();
+
+        System.out.println("Enter the vehicle color: ");
+        String newColor = myScanner.nextLine().trim();
+
+        System.out.println("Enter the vehicle odometer reading: ");
+        int newOdometerReading = Integer.parseInt(myScanner.nextLine().trim());
+
+        System.out.println("Enter the vehicle price: ");
+        float newPrice = Float.parseFloat(myScanner.nextLine().trim());
+
+        Vehicle newVehicle = new Vehicle(newVehicleID, newMakeModel, newColor, newOdometerReading, newPrice);
+
+        for (int i = 0; i < vehicles.length; i++) {
+            if (vehicles[i] == null) {
+                vehicles[i] = newVehicle;
+                System.out.println("Vehicle Successfully added!");
+                System.out.println((i + 1) + " - " + vehicles[i].getVehicleId() + " " + vehicles[i].getMakeModel() + " " + vehicles[i].getColor() + " " + vehicles[i].getOdometerReading() + " " + vehicles[i].getPrice());
+                break;
+            }
+
+        }
+
     }
 
 }
