@@ -2,6 +2,7 @@ package com.pluralsight;
 
 public class CellPhone {
 
+    //declare variables
     long serialNumber;
     String model;
     String carrier;
@@ -83,5 +84,4 @@ public class CellPhone {
     public void dial(String dialPhoneNumber, String dialOwner) {
         System.out.println(owner + "'s phone is calling " + dialOwner + " at: " + dialPhoneNumber);
     }
-
 }

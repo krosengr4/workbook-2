@@ -49,20 +49,4 @@ public class CellPhoneApplication {
         myPhone.dial(userPhone.getPhoneNumber(), userPhone.getOwner());
         userPhone.dial(myPhone.getPhoneNumber(), myPhone.getOwner());
     }
-
-
-
-
-
-
-
-//     Display the user's phone info
-//    public static void displayInfo(CellPhone cellPhone1) {
-//        System.out.println("Serial Number: " + cellPhone1.getSerialNumber());
-//        System.out.println("Phone Model: " + cellPhone1.getModel());
-//        System.out.println("Phone Carrier: " + cellPhone1.getCarrier());
-//        System.out.println("Phone Number: " + cellPhone1.getPhoneNumber());
-//        System.out.println("Phone Owner: " + cellPhone1.getOwner());
-//    }
-
 }
