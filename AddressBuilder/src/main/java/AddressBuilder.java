@@ -4,12 +4,15 @@ public class AddressBuilder {
 
     public static void main(String[] args) {
 
+        //Open scanner
         Scanner myScanner = new Scanner(System.in);
 
+        //Get user input
         System.out.println("Please enter your first and last name: ");
         String userName = myScanner.nextLine();
         userName = userName.trim();
 
+        //Get user billing
         System.out.println("Please enter your billing Address: ");
         String billingAddress = myScanner.nextLine();
 
@@ -23,6 +26,7 @@ public class AddressBuilder {
         int billingZip = myScanner.nextInt();
         myScanner.nextLine();
 
+        // new string builder and append user billing input
         StringBuilder billingInfo = new StringBuilder();
         billingInfo
                 .append(billingAddress)
@@ -33,6 +37,7 @@ public class AddressBuilder {
                 .append(" ")
                 .append(billingZip);
 
+        //Get user shipping
         System.out.println("Please enter your shipping address: ");
         String shippingAddress = myScanner.nextLine();
 
@@ -45,7 +50,7 @@ public class AddressBuilder {
         System.out.println("Please enter your shipping zip: ");
         int shippingZip = myScanner.nextInt();
 
-
+        //New string builder and append user shipping input
         StringBuilder shippingInfo = new StringBuilder();
         shippingInfo
                 .append(shippingAddress)
@@ -56,12 +61,9 @@ public class AddressBuilder {
                 .append(" ")
                 .append(shippingZip);
 
-
-
+        //Print out users name, billing and shipping info
         System.out.println(userName);
         System.out.println("Billing Address: " + "\n" + billingInfo + "\n");
         System.out.println("Shipping Address: " + "\n" + shippingInfo);
-
     }
-
 }
