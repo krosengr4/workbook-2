@@ -1,5 +1,6 @@
 public class Vehicle {
 
+    //declare variables
     long vehicleId;
     String makeModel;
     String color;
