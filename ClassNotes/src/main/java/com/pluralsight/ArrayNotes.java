@@ -1,6 +1,8 @@
 package com.pluralsight;
 
-public class Arrays {
+import java.util.Arrays;
+
+public class ArrayNotes {
 
     public static void main(String[] args) {
         //calling methods
@@ -14,6 +16,9 @@ public class Arrays {
         System.out.println("\n");
 
         copyArray();
+        System.out.println("\n");
+
+        sortArray();
         System.out.println("\n");
 
         //! Passing in an array into a method as a parameter
@@ -112,5 +117,19 @@ public class Arrays {
 
         // Returning numbers array
         return numbers;
+    }
+
+    //! Sorting an array
+    public static void sortArray() {
+        String[] nameList = {"Kevin", "Michael", "Rosie", "Stephanie",
+                "Roxanne", "Tiffany", "Brad", "Chad"};
+
+        //array.sort method will sort based on natural ordering of elements
+        //In this case it will sort them alphabetically
+        Arrays.sort(nameList);
+
+        for (String name: nameList){
+            System.out.println(name);
+        }
     }
 }
