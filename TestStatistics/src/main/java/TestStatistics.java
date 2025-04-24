@@ -1,6 +1,7 @@
 public class TestStatistics {
 
     public static void main(String[] args) {
+        //Create an array for test scores
         int[] testScores = {84, 52, 65, 98, 85, 77, 42, 82, 94, 83};
 
         //Variable holders for the sum, highest, and lowest score
@@ -29,5 +30,4 @@ public class TestStatistics {
         System.out.println("Highest Score: " + highestScore);
         System.out.println("Lowest Score: " + lowestScore);
     }
-
 }
